@@ -1,5 +1,6 @@
-#pragma once
+﻿#pragma once
 
 #include "windows.h"
 
-HWND createWindow();
+// 创建窗口
+HWND 创建窗口();

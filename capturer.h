@@ -1,4 +1,4 @@
-#include "d3d11.h"
+﻿#include "d3d11.h"
 #include "wrl.h"
 #include "dxgi1_2.h"
 
@@ -9,13 +9,21 @@
 
 using Microsoft::WRL::ComPtr;
 
-DXGI_SWAP_CHAIN_DESC createSwapChainDesc(HWND hwnd, size_t captureWidth, size_t captureHeight);
+// 创建交换链描述符
+DXGI_SWAP_CHAIN_DESC 创建交换链描述(HWND 窗口句柄, size_t 捕获宽度, size_t 捕获高度);
 
-ComPtr<ID3D11Device> createDevice();
+// 创建D3D设备
+ComPtr<ID3D11Device> 创建设备();
+
+// 创建设备和交换链
 std::tuple<ComPtr<ID3D11DeviceContext>, ComPtr<ID3D11Device>, ComPtr<IDXGISwapChain>>
-    createDeviceAndSwapChain(HWND hwnd, size_t captureWidth, size_t captureHeight);
+创建设备和交换链(HWND 窗口句柄, size_t 捕获宽度, size_t 捕获高度);
 
-void defineTheViewPort(ComPtr<ID3D11DeviceContext> context, int width, int height);
+// 定义视口
+void 定义视口(ComPtr<ID3D11DeviceContext> 上下文, int 宽度, int 高度);
 
-ComPtr<IDXGIOutputDuplication> GetDuplicatorFromDevice(ComPtr<ID3D11Device> device);
-std::pair<UINT, UINT> getMainDisplayDimensions();
+// 从设备获取屏幕复制器
+ComPtr<IDXGIOutputDuplication> 获取屏幕复制器(ComPtr<ID3D11Device> 设备);
+
+// 获取主显示器尺寸
+std::pair<UINT, UINT> 获取主显示器尺寸();

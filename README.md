@@ -1,11 +1,11 @@
-# duplicator
-Uses an IDXGISwapChain to do HW rendering to a regular window. Contents of which are duplicated from the screen using a IDXGIOutputDuplication
+﻿# 屏幕捕获器
+使用 IDXGISwapChain 进行硬件渲染到普通窗口。使用 IDXGIOutputDuplication 从屏幕复制内容。
 
-To build:
+构建方法：
 cd build
 cmake ..
-This will create solution/build file.
-You can either build manually from there, or use tasks.json, which contains command to use msbuild.
+这将创建解决方案/构建文件。
+你可以手动构建，或使用 tasks.json 中的 msbuild 命令。
 
-To debug:
-launch.json contains command to debug.
+调试：
+launch.json 包含调试命令。

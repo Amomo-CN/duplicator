@@ -1,4 +1,4 @@
-project(d3d)
+﻿project(d3d)
 
 cmake_minimum_required(VERSION 3.24)
 
